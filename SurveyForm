@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+
+:root {
+  --color-mint: #45a184;
+  --color-darkgreen: hsl(161, 95%, 25%);
+  --color-white: #f7fcfb;
+  --color-purple: #8f34eb;
+}
+
+#title {
+  font-family: Raleway, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #99fae5;
+}
+
+#description {
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  color: var(--color-white);
+  background: var(--color-mint);
+  line-height: 0.5;
+}
+
+form {
+  background: var(--color-darkgreen);
+  padding: 3.5rem;
+  border-radius: 10%;
+  margin-top: -0.25%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: -0.5%;
+  line-height: 1.5;
+    }
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 1px solid #a23ecf;
+  height: 2.5rem;
+  color: #432c4d;
+  font-family: Roboto, sans-serif;
+}
+
+.form-input:focus {
+  border-color: #8f34eb;
+  box-shadow: 0 0 0 0.2rem #8f34eb;
+}
+
+.input-checkbox, .input-radio {
+  display: inline-block;
+}
+
+.form-textarea {
+  display: block;
+  width: 100%;
+  resize: vertical;
+  font-family: Roboto, sans-serif;
+}
+
+.form-textarea:focus {
+  box-shadow: 0 0 0 0.2rem #8f34eb;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-family: Raleway; sans-serif;
+  background: var(--color-purple);
+  color: inherit;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  box-shadow: inset 0 0 0.75rem 0.25rem #6706b8;
+}
+
+@media (max-width: 480px) {
+  #title {
+    font-size: 20px;
+  }
+  #description {
+    font-size: 15px;
+    line-height: 1.0;
+  }
+  form {
+    width: 100%;
+    padding: 1.0rem;
+    margin: -5%;
+  }
+}
+</style>
+</head>
+<body>
+<div>
+    <header>
+      <h1 id="title"><strong>Wild Ways Survey Form</strong></h1>
+      <p id="description"><em>Thank you for providing feedback on ways we can improve our app!</em></p>
+  </header>
+<form id="survey-form">  
+  <div class="form-group">
+    <label for="name" 
+           id="name-label">Name</label>
+      <input id="name" 
+             class="form-input" 
+             type="text" 
+             placeholder="Enter your name" 
+             required>
+  </div>
+  <div class="form-group">
+    <label for="email" 
+              id="email-label">Email</label>
+      <input id="email" 
+             class="form-input" 
+             type="email" 
+             placeholder="Enter your email address" 
+             required>
+  </div>
+  <div class="form-group">
+   <label for="number" 
+             id="number-label">Age (optional)</label>
+    <input id="number" 
+           class="form-input" 
+           placeholder="Select" 
+           type="number" 
+           min="1" 
+           max="100">
+  </div>
+  <div class="form-group">
+      <label for="dropdown" 
+             id="dropdown-label">Which of the following best describes your favorite type of walk?</label>
+    <select name="dropdown" 
+            id="dropdown" 
+            class="form-input">
+      <option value="hills">Hills</option>
+      <option value="lowlands">Lowlands</option>
+      <option value="long-distance">Long distance</option>
+      <option value="coastal">Coastal</option>
+      <option value="around-the-block">Around the block</option>
+    </select>
+  </div>
+  <div class="form-group">
+    On which continent do you primarily complete your walks?<br>
+    <label>
+    <input type="radio" 
+           id="north-america" 
+           name="continent" 
+           value="north-america"
+           class="input-radio"
+           />North America</label>
+    <label>
+    <input type="radio" 
+           id="south-america" 
+           name="continent" 
+           value="south-america"
+           class="input-radio"
+           />South America</label>
+    <label>
+    <input type="radio" 
+           id="asia" 
+           name="continent" 
+           value="asia"
+           class="input-radio"
+           />Asia</label>
+    <label>
+    <input type="radio" 
+           id="australia" 
+           name="continent"
+           value="australia"
+           class="input-radio"
+           />Australia</label>
+    <label>
+    <input type="radio" 
+           id="africa" 
+           name="continent" 
+           value="africa"
+           class="input-radio"
+           />Africa</label>
+    <label>
+    <input type="radio" 
+           id="europe" 
+           name="continent" 
+           value="europe"
+           class="input-radio"
+           />Europe</label>
+    <label>
+    <input type="radio" 
+           id="antarctica" 
+           name="continent" 
+           value="antarctica"
+           class="input-radio"
+           />Antarctica</label>
+  </div>
+  <div class="form-group">
+    What do you primarily use Wild Ways for? (Check all that apply.)
+      <label>
+        <input type="checkbox" 
+               name="use" 
+               value="tracking-my-walks"
+               class="inline-block"/>Tracking my walks</label>
+    <label>
+      <input type="checkbox" 
+             name="use" 
+             value="discovering-new-walks"
+             class="inline-block"/>Discovering new walks</label>
+    
+    <label>
+      <input type="checkbox" 
+             name="use" 
+             value="connecting-with-other-walkers"
+             class="inline-block"/>Connecting with other walkers</label>
+  </div>
+  <div>
+    <p>What feedback or suggestions do you have to improve the Wild Ways app?
+      <textarea id="feedback" name="feedback" class="form-textarea" placeholder="Enter your feedback and suggestions here!"></textarea></p>
+  </div>
+      <div>
+        
+        <button type="submit" id="submit" class="submit-button">Submit!</button>
+        
+    </div>
+    </form>
+  </div>  
+  </body>
